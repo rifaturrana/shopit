@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProductDetails, clearErrors } from "../../actions/productActions";
 import { useAlert } from "react-alert";
 import { Carousel } from "react-bootstrap";
-import Loader from "../layout/loader";
+import Loader from "../layout/Loader";
 import MetaData from "../layout/MetaData.js";
 const ProductDetail = ({ match }) => {
   const dispatch = useDispatch();
@@ -26,6 +26,7 @@ const ProductDetail = ({ match }) => {
         <Loader />
       ) : (
         <Fragment>
+          <MetaData title={product.name} />
           <div className="row f-flex justify-content-around">
             <div className="col-12 col-lg-5 img-fluid" id="product_image">
               <Carousel pause="hover">
