@@ -1,14 +1,16 @@
 import React, { Fragment } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { Search } from "./Search";
-
+import "../../App.css";
 const Header = () => {
   return (
     <Fragment>
       <nav className="navbar row">
         <div className="col-12 col-md-3">
           <div className="navbar-brand">
-            <img src="/images/shopit_logo.png" />
+            <Link to="/">
+              <img src="/images/shopit_logo.png" />
+            </Link>
           </div>
         </div>
 
