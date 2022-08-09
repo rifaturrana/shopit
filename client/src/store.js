@@ -5,9 +5,11 @@ import {
   productsReducer,
   productDetailsReducer,
 } from "./reducers/productReducer";
+import { authReducer } from "./reducers/userReducer";
 const reducer = combineReducers({
   products: productsReducer,
   productDetails: productDetailsReducer,
+  auth: authReducer,
 });
 
 let initialState = {};
